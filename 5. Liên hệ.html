@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <style> 
+        body{
+            font-family:'Courier New';
+        }
+        td{
+            text-align: center;
+        }
+        input:valid{
+            border: 1px solid green;
+        }
+        input:invalid{
+            border: 1px solid red;
+        }
+    </style>
+
+    <title>Landing Page</title>
+</head>
+
+<body>
+<form method ="post">
+    <caption>LIÊN HỆ</caption>
+    <table border="1" cellspacing ="0" cellpadding = "5"> 
+        <tr>
+            <td> Họ và tên </td>
+            <td>
+                <input name="hovaten" minlength="2" maxlength="50"/>
+            </td>
+        </tr>
+        <tr>
+            <td> Giới tính </td>
+            <td>
+                <select name ="gioitinh"/>
+                    <option value="nam">Nam</option>
+                    <option value="nu">Nữ</option>
+                    <option value="khac">Khác</option>
+
+            </td>
+        </tr>
+        <tr>
+            <td> Email </td>
+            <td>
+                <input type="email" required/>
+            </td>
+        </tr>
+        <tr>
+            <td> Số điện thoại </td>
+            <td>
+                <input type="text" pattern="(\84|0)" required/>
+            </td>
+        </tr>
+        <tr>
+            <td> Nội dung liên hệ </td>
+            <td>
+                <input name="noidung"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type ="submit">Gửi</button>
+                <button type="reset">Nhập lại</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+</body>
+</html>
