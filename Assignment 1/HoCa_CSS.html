@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hồ Cá CSS3</title>
+	<meta charset="utf-8">
+	<style>
+#ca1
+{
+	left:100px; top:400px;
+	width: 200px; height: 147px;
+	position: absolute;
+	-webkit-animation-name: Shark;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-play-state: running;	
+	-webkit-transform:scaleX(1)
+}
+@-webkit-keyframes Shark
+{
+	0%   {left:100px; top:400px;}
+	1%   {left:100px; top:400px;}
+	20%  {left:700px; top:400px;}
+	40%  {left:700px; -webkit-transform:scaleX(-1);}
+	60%  {left:700px; top:100px; -webkit-transform:scaleX(-1);}
+	90%  {left:500px; top:100px; -webkit-transform:scaleX(-1);}
+	100% {left:500px; top:400px; -webkit-transform:scaleX(-1);}
+}
+
+#ca4
+{
+	left:10px; top:40px;
+	width: 200px; height: 147px;
+	position: absolute;
+	-webkit-animation-name: Shark;
+	-webkit-animation-duration: 30s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-play-state: running;	
+	-webkit-transform:scaleX(1)
+}
+@-webkit-keyframes Shark
+{
+	0%   {left:20px; top:50px;}
+	1%   {left:100px; top:400px;}
+	20%  {left:700px; top:400px;}
+	40%  {left:700px; -webkit-transform:scaleX(-1);}
+	60%  {left:700px; top:100px; -webkit-transform:scaleX(-1);}
+	90%  {left:500px; top:100px; -webkit-transform:scaleX(-1);}
+	100% {left:500px; top:400px; -webkit-transform:scaleX(-1);}
+}
+
+body {
+			margin: 0;
+            padding: 0;
+            height: 100vh;
+			display: flex;
+			justify-content: center; 
+            align-items: center; 
+			background-image: url("Image/background1.jpg");
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+			transition: background-image 0.5s ease;
+        }
+
+		button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 5px;
+            cursor: pointer;
+	</style>
+</head>
+<body>
+
+<div class="background">
+
+    <div id="ca1"><img src="Image/ca1.gif"; width="200" height="240"></div>
+</div>
+
+<div class="background">
+
+	<div id="ca4"><img src="Image/ca4.gif"; width="200" height="200"></div>
+	
+</div>
+
+<button onclick="changeBackground()">Chuyển Đổi Hình Nền</button>
+
+<script>
+	let currentBackground = 1;
+
+	function changeBackground() {
+		currentBackground++; 
+
+		if (currentBackground > 3) {
+			currentBackground = 1; 
+		}
+
+		document.body.style.backgroundImage = `url('Image/background${currentBackground}.jpg')`;
+	}
+</script>
+</body>
+</html>
