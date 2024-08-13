@@ -99,5 +99,25 @@ body {
 		document.body.style.backgroundImage = `url('Image/background${currentBackground}.jpg')`;
 	}
 </script>
+
+<audio id="myAudio" style = "width: 1px " autoplay> 
+			<source id="mp4_src" src= "" > </audio> 
+				
+<button onclick="my_Audio()">Chuyển Đổi Nhạc Nền</button>
+
+<script>
+			var t=0 ;
+			document.getElementById("myAudio").style.visibility = "hidden";
+			function my_Audio() 
+			{ 
+				t= t+1 ;
+				if( t%2 == 0)
+				document.getElementById("mp4_src").src = "./Image/nhac1.mp3"; 
+				else
+				document.getElementById("mp4_src").src = "./Image/nhac2.mp3"; 
+				document.getElementById("myAudio").load(); 
+			}
+</script>
+
 </body>
 </html>
